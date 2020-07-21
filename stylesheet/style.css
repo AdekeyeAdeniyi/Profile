@@ -266,6 +266,10 @@ body{
         /* max-width: 960px;  */
     }
 
+    .navigation{
+        padding:2.5rem 6rem;
+    }
+
     .header{
     	position: relative;
     	overflow: hidden;
