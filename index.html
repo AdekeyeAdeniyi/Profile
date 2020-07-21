@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------- stlye link ----------->
+    <link href="stylesheet/style.css" rel="stylesheet" type="text/css" />
+
+    <!---------- font link ----------->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@800&display=swap" rel="stylesheet">
+
+
+    <title>Adeniyi | Porfolio</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                <nav class="navigation">
+                    <a class="navigation-logo" href="#">
+                        <img src="img/logo.png" alt="logo"/>
+                    </a>
+
+                    <div class="humburger" onclick="toggler(this)">
+                        <div class="icon-x"></div>
+                        <div class="icon-z"></div>
+                        <div class="icon-y"></div>
+                    </div>
+
+                    <div class="navigation-menu collaspe-navigations">
+                        <ul>
+                            <li class="nav-item"> <a href="#" class="nav-link" >Home</a></li>
+                            <li class="nav-item"> <a href="#" class="nav-link" >About</a></li>
+                            <li class="nav-item"> <a href="#" class="nav-link" >Services</a></li>
+                            <li class="nav-item"> <a href="#" class="nav-link" >Porfolio</a></li>
+                            <li class="nav-item"> <a href="#" class="nav-link" >Pricing</a></li>
+                            <li class="nav-item"> <a href="#" class="nav-link" >Experience</a></li>
+                        </ul>
+                    </div>
+                </nav>
+        </header>
+        <div class="view"></div>
+        <section class="section-porfolio">
+                <div class="icons">
+                    <a href="#"><span class="iconify" data-icon="cib:facebook-f" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="el:twitter" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="ion:logo-instagram" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="ri:linkedin-box-fill" data-inline="false"></span></a>
+                </div>
+                <div class="porfolio-details">
+                    <div class="greet"> hello I'm</div>
+                    <div class="porfolio-title"> adeniyi emmanuel</div>
+                    <div class="porfolio-description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Vel architecto voluptatibus debitis? Libero ipsam laborum quam,
+                        quas consectetur inventore dolore rerum doloremque minima similique 
+                        repudiandae voluptates molestiae excepturi. Nobis, soluta.
+                    </div>
+                    <a href="#" class="btn bt-primary">hire me</a>
+                </div>
+
+                <div class="image">
+                    <img src="img/human.png" alt="avatar" />
+                </div>
+        </section>
+    </div>
+    <script>
+
+        let toggleNav = document.querySelector(".navigation-menu");
+
+        
+        function toggler(x){
+            x.classList.toggle("toogle");
+
+            toggleNav.classList.toggle("show");
+        }
+
+    </script>
+
+      <!-- import iconify icons -->
+      <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</body>
+</html>

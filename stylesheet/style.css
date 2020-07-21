@@ -1,0 +1,380 @@
+:root{
+    --bg-color: #E3C386;
+    --primary: #3B7282;
+    --secondary: #F9E3BA;
+    --white: #ffff;
+
+ /********* grey **********/   
+    --grey-400: #BDBDBD;
+    --grey-600: #4E4E4E;
+}
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Nunito";
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    color: var(--grey-800);
+    box-sizing: inherit;
+    line-height: 1.7;
+}
+
+.container{
+    width: 100%;
+    padding: 0rem 1.5rem;
+    margin: 0rem auto;
+    height: 100vh;
+}
+
+/* navigation */
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none;
+}
+
+.navigation{
+    padding: 2.5rem 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navigation-menu{
+    width: 100%;
+    padding: 1rem 0rem 1rem 2rem;
+    display: none;
+    position: absolute;
+    top: 8rem;
+    background-color: #3b7282;
+}
+
+.navigation-menu ul{
+    list-style: none;
+}
+
+
+.nav-item{
+    padding: .5rem 0rem;
+}
+
+.nav-link:link,
+.nav-link:visited{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1.2px solid transparent;
+    color: white;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:active{
+    border-bottom: 1.2px solid var(--white);
+}
+
+.collaspe-navigation{
+    flex-basis: 100%;
+    flex-grow: 1;
+} 
+
+
+/* hmburger */
+.humburger{
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.icon-x,
+.icon-z,
+.icon-y{
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.toogle .icon-x {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 2px);
+}
+
+.toogle .icon-z{opacity: 0;}
+
+
+.toogle .icon-y {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-9px, -2px);
+}
+
+/* setion porfolio */
+/* .section-porfolio{
+    padding: 3rem 0;
+} */
+
+.greet,
+.porfolio-title{
+    text-transform: capitalize;
+    font-weight: 800;
+    font-family: "Poppins";
+} 
+
+.greet{
+    font-size: 2.2rem;
+    color: var(--primary)
+}
+
+.porfolio-title{
+    font-size: 2.8rem;
+    color: var(--grey-600);
+}
+
+.porfolio-description{
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    max-width: 60ch;
+    color: var(--grey-400);
+}
+
+.btn:link,
+.btn:visited{
+    position: relative;
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1.2px solid transparent;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: .8rem 4rem;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+    border-radius: .5rem;
+    transition: ease-in-out all 0.3s;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: transparent;
+    color: var(--primary);
+    border: 1.2px solid var(--primary);
+}
+
+.image{
+    position: relative;
+    width: 71%;
+    margin-top: 2rem;
+}
+
+.image img{
+    width: 100%;
+}
+
+
+
+
+/************** Media quries  **********/
+@media (min-width: 576px){
+    /* .container {
+        max-width: 540px;
+    } */
+
+    .view{
+        display: none;
+    }
+
+
+}
+
+@media (min-width: 768px){
+    .container {
+        /* max-width: 720px; */
+        overflow: hidden;
+        position: relative; 
+    }
+
+    .greet{
+        font-size: 2.2rem;
+    }
+
+    .porfolio-title{
+        font-size: 3rem;
+    }
+
+    .porfolio-description{
+        margin: 2rem 0;
+        line-height: 2;
+        max-width: 45ch;
+    }
+
+    .view{
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .view::before{
+        position: absolute;
+        content: '';
+        width: 140%;
+        height: 100%;
+        background-color: var(--bg-color);
+        -webkit-transform: skewX(20deg);
+        -moz-transform: skewX(20deg);
+        -ms-transform: skewX(20deg);
+        -o-transform: skewX(20deg);
+        transform: skewX(20deg);
+        top: 0;
+        left: 20px;
+    }
+
+    .image{
+        width: 39%;
+        top: -28rem;
+        left: 36rem;
+    }
+
+}
+
+
+@media (min-width: 992px){
+    .container {
+        /* max-width: 960px;  */
+    }
+
+    .header{
+    	position: relative;
+    	overflow: hidden;
+    }
+
+    .humburger{
+        display: none;
+    }
+
+    .nav-item{
+        display: inline-block;
+        margin-right: .8rem;
+    }
+
+    .nav-item:last-child{
+        margin-right: 0rem
+    }
+
+    .navigation-menu{
+        display: block;
+        width: auto;
+    }
+
+    .greet{
+        font-size: 2.5rem;
+    }
+
+    .section-porfolio .icons{
+        position: fixed;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border: 2px solid var(--bg-color);
+        border-radius: 12rem;
+        top: 24rem;
+        left: 2rem;
+    }
+
+    .section-porfolio a{
+       color: var(--grey-600); 
+    }
+
+    .porfolio-details{
+        margin-left: 6.5rem;
+        margin-top: 1rem;
+    }
+
+    .porfolio-title{
+        font-size: 3.5rem;
+    }
+
+    .porfolio-description{
+        margin: 3rem 0;
+        line-height: 2;
+        max-width: 48ch;
+    }
+
+    .nav-link:link,
+    .nav-link:visited{
+        color: var(--white);
+    }
+
+    .navigation-menu{
+        background-color: transparent;
+        width: auto;
+        position: relative;
+        top: 0rem;
+    }
+
+    .image{
+        width: 40%;
+        top: -40rem;
+        left: 40rem;    
+    }
+
+
+    
+}
+
+@media (min-width: 1200px){
+    /* .container {
+        max-width: 1140px;
+    } */
+
+    .nav-link:link,
+    .nav-link:visited{
+        font-size: 1.6rem;
+    }
+
+    .greet{
+        font-size: 3rem;
+    }
+
+    .porfolio-title{
+        font-size: 4.5rem;
+    }
+
+    .porfolio-description{
+        margin: 2rem 0;
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+
+    .image{
+        width: 33%;
+        top: -44rem;
+        left: 48rem;    
+    }
+
+		}
